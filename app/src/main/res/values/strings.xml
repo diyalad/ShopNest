@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">ShopNest</string>
+    <string name="nav_open">Open Navigation Drawer</string>
+    <string name="nav_close">Close Navigation Drawer</string>
+    <!--    sign In-->
+    <string name="siginuptxt">Do not have an account? Signup!</string>
+    <string name="signinpbtn">Sign in</string>
+    <string name="email">Email</string>
+    <string name="pwd">Password</string>
+    <string name="fptext">Forget Password ?</string>
+
+    <!--    home-->
+    <string name="categories">Categories</string>
+    <string name="products">Products</string>
+    <string name="category_icon_description">Category Icon</string>
+    <string name="category_name_placeholder">Category Name</string>
+    <string name="navigate_to_category_description">Navigate to category</string>
+    <!--    profile-->
+    <string name="save_address">Save Address</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="reviews">Reviews</string>
+    <string name="questions_answers">Questions And Answers</string>
+    <string name="logout">Log Out</string>
+    <string name="save_address_title">Save Address</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="my_activity">My Activity</string>
+    <string name="edit_profile_title">Profile</string>
+    <string name="change_langaue">Try ShopNest in your language</string>
+    <string name="my_activity_title">My Activity</string>
+    <string name="more_language">+4 More</string>
+    <string name="review_title">Reviews</string>
+    <!--    cart-->
+    <string name="cart">Cart</string>
+    <!--    side Navigation bar-->
+    <string name="nav_fav">Favorite</string>
+    <string name="nav_category">Category</string>
+    <string name="nav_order_history">Order History</string>
+    <string name="nav_my_profile">My Profile</string>
+    <string name="nav_reviews">Reviews</string>
+    <string name="nav_feedback">Feedback</string>
+    <string name="nav_share">Share</string>
+    <string name="nav_logout">Logout</string>
+
+    <string name="delivery_date">
+    Delivery by Mar 20, Thu · <font color="#4CAF50">FREE</font>
+    </string>
+
+    <!-- Favourite Activity-->
+    <string name="empty_favorites">Empty favorites list</string>
+    <string name="no_favorites">You haven\'t added any favorites yet</string>
+    <string name="explore_products">Explore Products</string>
+    <string name="remove_favorite">Remove from favorites</string>
+    <string name="product_image_desc">Product image</string>
+    <string name="original_price">Price:</string>
+    <string name="details">Details:</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="favorite_icon_desc">Add to favorites</string>
+    <string name="cart_icon_desc">Shopping cart</string>
+    <string name="discount_price">%d%% OFF</string>
+
+
+    <!-- Add more strings here -->
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="gender_options">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="marital_status_options">
+        <item>Single</item>
+        <item>Married</item>
+        <item>Divorced</item>
+    </string-array>
+
+    <string-array name="education_options">
+        <item>High School</item>
+        <item>Bachelor</item>
+        <item>Master</item>
+        <item>PhD</item>
+    </string-array>
+
+    <string-array name="income_options">
+        <item>Less than Rs1000</item>
+        <item>Rs1000 - Rs5000</item>
+        <item>Rs5000 - Rs10,000</item>
+        <item>More than Rs10,000</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ShopNest"
+        tools:targetApi="31">
+        <activity
+            android:name=".CustomerCareActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminOrderHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminFavoritesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminCartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReportsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminDashBoard"
+            android:exported="false" />
+        <activity
+            android:name=".OrderHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RatingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FavouritesActivitly"
+            android:exported="false" />
+        <activity
+            android:name=".EditAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SelectAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BuyNowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProductDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SubcategoryProductsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CategoryItemsDisplay"
+            android:exported="false" />
+        <activity
+            android:name=".DeleteAccount"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".OrderList"
+            android:exported="false" />
+        <activity
+            android:name=".Reviews"
+            android:exported="false" />
+        <activity
+            android:name=".profile"
+            android:exported="false"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name=".CategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".cart"
+            android:exported="false" />
+        <activity
+            android:name=".otp"
+            android:exported="false"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name=".home"
+            android:exported="false" />
+        <activity
+            android:name=".signin"
+            android:exported="false" />
+        <activity
+            android:name=".signup"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:strokeColor="@color/deep_blue"
+    app:strokeWidth="2dp"
+    android:backgroundTint="@color/white"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Image in CardView -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="210dp"
+            android:layout_height="210dp"
+            app:cardCornerRadius="8dp"
+            android:backgroundTint="@color/white"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/deep_blue"
+            app:cardElevation="0dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:id="@+id/favoriteItemImage"
+                android:layout_width="210dp"
+                android:layout_height="210dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder"
+                tools:src="@drawable/ic_launcher_background" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Product Name -->
+        <TextView
+            android:id="@+id/favoriteItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            tools:text="Premium Wireless Headphones" />
+
+        <!-- Price Information -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/favoriteDiscountedPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="₹99.99" />
+
+            <TextView
+                android:id="@+id/favoriteOriginalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                tools:text="₹129.99" />
+
+            <TextView
+                android:id="@+id/favoriteDiscountPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="2dp"
+                android:textColor="@color/green"
+                android:textSize="12sp"
+                tools:text="23% OFF" />
+        </LinearLayout>
+
+        <!-- Rating -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical">
+
+            <RatingBar
+                android:id="@+id/favoriteItemRating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="4.5"
+                android:stepSize="0.5" />
+
+        </LinearLayout>
+
+        <!-- Delivery Info -->
+        <TextView
+            android:id="@+id/favoriteDeliveryInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/deep_blue"
+            android:textSize="14sp"
+            android:drawableStart="@drawable/ic_delivery_truck"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/deep_blue"
+            tools:text="Free Delivery | Get it by tomorrow" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

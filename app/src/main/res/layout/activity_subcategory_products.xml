@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".SubcategoryProductsActivity">
+
+    <!-- Toolbar with Search Bar and Cart Icon -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="ShopNest"
+        app:titleTextColor="@android:color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--            &lt;!&ndash; Search Bar &ndash;&gt;-->
+            <!--            <SearchView-->
+            <!--                android:id="@+id/searchView"-->
+            <!--                android:layout_width="338dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_alignParentStart="true"-->
+            <!--                android:layout_marginStart="0dp"-->
+            <!--                android:layout_marginEnd="8dp"-->
+            <!--                android:layout_toStartOf="@+id/cartIcon"-->
+            <!--                android:iconifiedByDefault="false"-->
+            <!--                android:queryHint="Search products..." />-->
+            <!-- Favorite Icon -->
+            <!-- Cart Icon -->
+            <ImageView
+                android:id="@+id/favorite"
+                android:layout_width="25dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="74dp"
+                android:layout_marginBottom="5dp"
+                android:contentDescription="Cart"
+                android:src="@drawable/baseline_favorite_24" />
+
+            <ImageView
+                android:id="@+id/cartIcon"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="7dp"
+                android:contentDescription="Cart"
+                android:src="@drawable/cartremovebg" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Filter Buttons Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@color/white"
+        android:elevation="4dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Filter"
+            android:textColor="@color/white"
+            app:icon="@drawable/baseline_filter_list_24"
+            app:iconTint="@color/white"
+            app:backgroundTint="@color/deep_blue"
+            app:cornerRadius="8dp"
+            android:layout_marginEnd="4dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSortPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Price"
+            android:textColor="@color/white"
+            app:icon="@drawable/baseline_currency_rupee_24"
+            app:iconTint="@color/white"
+            app:backgroundTint="@color/deep_blue"
+            app:cornerRadius="8dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSortRating"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Rating"
+            android:textColor="@color/white"
+            app:icon="@drawable/rating_star_filled"
+            app:iconTint="@color/white"
+            app:backgroundTint="@color/deep_blue"
+            app:cornerRadius="8dp"
+            android:layout_marginStart="4dp"/>
+    </LinearLayout>
+
+    <!-- FrameLayout for Filter UI -->
+    <FrameLayout
+        android:id="@+id/filterContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:padding="8dp" />
+
+    <!-- RecyclerView to Display Products -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/productsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        tools:listitem="@layout/item_product" />
+
+</LinearLayout>

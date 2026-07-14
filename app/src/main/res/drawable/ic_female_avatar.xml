@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Head -->
+    <path
+        android:fillColor="#F4C29C"
+        android:pathData="M50,25a20,20 0 1,0 -20,20a20,20 0 1,0 20,-20z" />
+
+    <!-- Hair -->
+    <path
+        android:fillColor="#4E342E"
+        android:pathData="M20,25c5,-15 30,-20 45,-10c5,3 10,10 10,15c-10,-10 -20,-15 -30,-15s-20,5 -25,15z" />
+
+    <!-- Dress -->
+    <path
+        android:fillColor="#E91E63"
+        android:pathData="M20,65c0,-10 15,-20 30,-20s30,10 30,20v20h-60z" />
+</vector>
+

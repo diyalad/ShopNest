@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/summaryContainer"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_summary_popup"
+    android:padding="16dp"
+    android:visibility="gone"
+    app:layout_anchor="@id/appBarLayout"
+    app:layout_anchorGravity="bottom|center_horizontal"
+    app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🌟 Favorite Products Summary"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="12dp"/>
+
+    <TextView
+        android:id="@+id/summaryContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:lineSpacingExtra="4dp"
+        android:text="🔹 Total Favorites: 12\n🔸 Total Value: \$1,200\n🔹 Avg Discount: 23%\n🔸 Popular Category: Electronics\n🔹 Potential Revenue: \$1,500\n🔸 Top Rated: 4.8★\n🔹 Delivery Types: Free (8), Paid (4)\n🔸 Recommendation: Add more variety in Home category"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:text="Got it!"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/deep_blue"
+        app:cornerRadius="8dp"/>
+
+</LinearLayout>

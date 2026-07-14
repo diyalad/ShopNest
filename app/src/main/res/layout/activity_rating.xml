@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="--Rating ⭐--"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="35dp" />
+
+
+    <TextView
+        android:id="@+id/promptTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="We are glad that we were able to help! 😊 Now give us a rating according to your experience 🌟"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/ratingCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        app:strokeWidth="2dp"
+        android:backgroundTint="@color/white"
+        app:strokeColor="@color/deep_blue"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="1"
+                android:rating="0"
+                android:progressTint="@android:color/holo_orange_light"
+                android:secondaryProgressTint="@android:color/holo_orange_light"
+                android:isIndicator="false"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/feedbackCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:strokeColor="@color/deep_blue"
+        android:backgroundTint="@color/white"
+        app:strokeWidth="2dp"
+        app:cardElevation="8dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/feedbackEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Share your experience... 📝"
+                android:textStyle="bold"
+                android:inputType="textMultiLine"
+                android:minHeight="100dp"
+                android:background="@null" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cornerRadius="12dp"
+        android:backgroundTint="@color/deep_blue"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Submit 📤"
+        android:layout_marginTop="8dp" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/completedRatingCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/deep_blue"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="16dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/completedTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="We are glad that you had a good experience in Learnify! 🎉 Thank you for your feedback! 🙏"
+                android:textSize="16sp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/ratingStatusTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Your rating: Not submitted"
+                android:layout_marginTop="8dp"
+                android:gravity="center" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

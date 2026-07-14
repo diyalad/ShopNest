@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="price_labels">
+        <item>₹0</item>
+        <item>₹2,500</item>
+        <item>₹5,000</item>
+        <item>₹7,500</item>
+        <item>₹10,000+</item>
+    </string-array>
+</resources>

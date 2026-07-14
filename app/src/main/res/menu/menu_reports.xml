@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_item1"
+        android:title="User Report"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_item2"
+        android:title="OrderHistory Report"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_item3"
+        android:title="Rating Report"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_item4"
+        android:title="Earing Report"
+        app:showAsAction="never" />
+
+
+</menu>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@android:color/white"
+    android:clickable="true"
+    android:focusable="true"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/deep_blue"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Product Image -->
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder"
+            android:contentDescription="Product Image"
+            android:background="@color/image_background" />
+
+        <!-- Product Name -->
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Libas Women Embroidered..."
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/black" />
+
+        <!-- Rating -->
+        <TextView
+            android:id="@+id/ratingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.5 ⭐"
+            android:textSize="12sp"
+            android:textColor="@color/gold"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp" />
+
+        <!-- Pricing Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="2dp"
+            android:paddingBottom="4dp">
+
+            <!-- Discounted Price -->
+            <TextView
+                android:id="@+id/discountedPriceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹1,799"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <!-- Original Price (Strikethrough) -->
+            <TextView
+                android:id="@+id/originalPriceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="M.R.P: ₹4,999"
+                android:textSize="11sp"
+                android:textColor="#666666"
+                android:paddingTop="1dp" />
+
+            <!-- Discount Percentage -->
+            <TextView
+                android:id="@+id/discountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="64% off"
+                android:textSize="11sp"
+                android:textColor="@color/green"
+                android:paddingTop="1dp" />
+        </LinearLayout>
+
+        <!-- Add to Cart Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addToCartButton"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="Add to cart"
+            android:textSize="11sp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/white"
+            app:backgroundTint="@color/deep_blue"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="4dp"
+            android:padding="4dp"
+            app:cornerRadius="8dp"
+            android:elevation="2dp" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

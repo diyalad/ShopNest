@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:layout_marginTop="30dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Favorites"
+        app:titleTextColor="@android:color/white"/>
+
+    <!-- RecyclerView for favorite products -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/favoritesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        tools:listitem="@layout/item_favorite_product"
+        android:padding="16dp"/>
+
+    <!-- Add this empty state view -->
+    <LinearLayout
+        android:id="@+id/emptyStateView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        android:visibility="gone">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/baseline_favorite_24"
+        android:contentDescription="@string/empty_favorites"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_favorites"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnExplore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/explore_products"
+        android:layout_marginTop="24dp"
+        style="@style/Widget.AppCompat.Button.Colored"/>
+    </LinearLayout>
+</RelativeLayout>

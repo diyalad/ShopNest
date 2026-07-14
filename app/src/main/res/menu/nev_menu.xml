@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:shownIn = "nevigation_view">
+
+        <group
+    android:id="@+id/group1">
+
+        <item
+            android:id="@+id/nav_fav"
+            android:title="@string/nav_fav"
+            android:icon="@drawable/fav"/>
+        <item
+            android:id="@+id/nav_category"
+            android:title="@string/nav_category"
+            android:icon="@drawable/categores"/>
+        <item
+            android:id="@+id/nav_order_list"
+            android:title="@string/nav_order_history"
+            android:icon="@drawable/order_list"/>
+        <item
+            android:id="@+id/nav_my_profile"
+            android:title="@string/nav_my_profile"
+            android:icon="@drawable/baseline_person_24"/>
+</group>
+
+
+
+<group
+    android:id="@+id/group2">
+        <item
+            android:id="@+id/nav_reviews"
+            android:title="@string/reviews"
+            android:icon="@drawable/rate"/>
+        <item
+                android:id="@+id/nav_share"
+                android:title="@string/nav_share"
+                android:icon="@drawable/sharp_folder_shared_24"/>
+
+</group>
+
+        <group
+            android:id="@+id/group3">
+                <item
+                    android:id="@+id/nav_logout"
+                    android:title="@string/nav_logout"
+                    android:icon="@drawable/logout"/>
+        </group>
+</menu>

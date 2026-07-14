@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Back Button and Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/baseline_arrow_back_ios_new_24"
+                android:clickable="true"
+                android:focusable="true"
+                app:tint="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
+
+        <!-- Profile Image -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:radius="60dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/white">
+
+                <ImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/baseline_person_24"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:scaleType="centerCrop"/>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- Tab Layout -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/primary"
+            app:tabTextColor="@color/black"
+            app:tabSelectedTextColor="@color/primary"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            android:background="@drawable/button_password"
+            android:paddingBottom="10dp"/>
+
+        <!-- ViewFlipper for Tab Switching -->
+        <ViewFlipper
+            android:id="@+id/viewFlipper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Primary Info Layout -->
+            <LinearLayout
+                android:id="@+id/layoutPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:paddingBottom="16dp"
+                android:background="@color/white">
+
+                <EditText
+                    android:id="@+id/fullName"
+                    style="@style/EditTextStyle"
+                    android:hint="Full Name *"
+                    android:layout_marginBottom="10dp"/>
+
+                <EditText
+                    android:id="@+id/phone"
+                    style="@style/EditTextStyle"
+                    android:hint="Phone *"
+                    android:inputType="phone"
+                    android:layout_marginBottom="10dp"/>
+
+                <EditText
+                    android:id="@+id/email"
+                    style="@style/EditTextStyle"
+                    android:hint="Email ID *"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginBottom="10dp"/>
+
+                <Spinner
+                    android:id="@+id/genderSpinner"
+                    style="@style/SpinnerStyle"
+                    android:layout_marginBottom="10dp"/>
+
+                <EditText
+                    android:id="@+id/pincode"
+                    style="@style/EditTextStyle"
+                    android:hint="Pincode"
+                    android:layout_marginBottom="10dp"/>
+
+                <EditText
+                    android:id="@+id/city"
+                    style="@style/EditTextStyle"
+                    android:hint="City"
+                    android:layout_marginBottom="10dp"/>
+
+                <EditText
+                    android:id="@+id/state"
+                    style="@style/EditTextStyle"
+                    android:hint="State"
+                    android:layout_marginBottom="10dp"/>
+            </LinearLayout>
+
+            <!-- Other Info Layout -->
+            <LinearLayout
+                android:id="@+id/layoutOther"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:paddingBottom="16dp">
+
+                <EditText
+                    android:id="@+id/dob"
+                    style="@style/EditTextStyle"
+                    android:hint="Date of Birth"
+                    android:focusable="false"
+                    android:layout_marginBottom="10dp"/>
+
+                <Spinner
+                    android:id="@+id/maritalStatusSpinner"
+                    style="@style/SpinnerStyle"
+                    android:layout_marginBottom="10dp"/>
+
+                <Spinner
+                    android:id="@+id/educationSpinner"
+                    style="@style/SpinnerStyle"
+                    android:layout_marginBottom="10dp"/>
+
+                <Spinner
+                    android:id="@+id/incomeSpinner"
+                    style="@style/SpinnerStyle"
+                    android:layout_marginBottom="10dp"/>
+            </LinearLayout>
+
+            <!-- Delete Profile Layout -->
+            <LinearLayout
+                android:id="@+id/layoutDelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="20dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:id="@+id/DeleteAccountTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Are you sure you want to delete your Account?"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:layout_marginBottom="16dp"/>
+
+
+            </LinearLayout>
+        </ViewFlipper>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SAVE"
+            android:backgroundTint="@color/primary"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:padding="12dp"
+            android:visibility="gone"/>
+    </LinearLayout>
+</ScrollView>

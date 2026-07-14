@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="RespberryGlance">#855160</color>
+    <color name="darkblude">#07044F</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="rose_pink">#F7879A</color>
+    <color name="primary">#0857F6</color>
+    <color name="secondary">#517FEE</color>
+    <color name="hot_pink">#F660AB</color>
+    <color name="tea_rose">#FF87C3</color>
+    <color name="granny_smith_apple">#A8E4A0</color>
+    <color name="pine">#007878</color>
+    <color name="blue_magenta">#A16CD4</color>
+    <color name="megenta">#E0CFEA</color>
+    <color name="purple_heart">#69359c</color>
+    <color name="grape_mouse">#63424b</color>
+    <color name="glossy_grape">#ab92b3</color>
+    <color name="clssic_denim">#2A4D69</color>
+    <color name="deep_blue">#4B86B4</color>
+    <color name="airy_tones">#BAC8E0</color>
+    <color name="red">#FFF60000</color>
+    <color name="alice_blue">#489AEC</color>
+
+    <color name="home">#1194AA</color>
+    <color name="like">#C9379D</color>
+    <color name="category">#AE7E0F</color>
+    <color name="profile">#5B37B7</color>
+
+    <color name="home_20">#331194AA</color>
+    <color name="like_20">#3300379D</color>
+    <color name="category_20">#33AE7E0E</color>
+    <color name="profile_20">#335B37B7</color>
+    <color name="gray_light">#E0E0E0</color>
+    <color name="Purple">#6200EE</color>
+    <color name="Teal">#03DAC6</color>
+    <color name="green">#008000</color>
+    <color name="gold">#FFD700</color>
+    <color name="gray_dark">#757575</color>
+    <color name="gray">#7A7777FF</color>
+    <color name="light_green">#E8F5E9</color>
+    <color name="hint_color">#80000000</color>
+    <color name="box_stroke_color">#FF0000FF</color>
+
+    <!-- Background Colors -->
+    <color name="background_light">#F5F5F5</color>
+    <color name="surface_color">#FFFFFF</color>
+    <color name="image_background">@color/white</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#1A1A1A</color>
+    <color name="text_secondary">#666666</color>
+
+    <!-- Accent and Functional Colors -->
+    <color name="accent_color">#2196F3</color>
+    <color name="price_color">#D32F2F</color>
+    <color name="green_success">#4CAF50</color>
+
+
+</resources>

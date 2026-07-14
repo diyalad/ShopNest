@@ -1,0 +1,20 @@
+<!-- res/drawable/subcategory_item_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background color -->
+    <solid android:color="@color/white" /> <!-- Use your desired background color -->
+
+    <!-- Rounded corners -->
+    <corners android:radius="500dp" /> <!-- Adjust the radius as needed -->
+
+    <!-- Shadow effect -->
+    <stroke
+        android:width="10dp"
+        android:color="@color/gray_light" /> <!-- Light gray border -->
+
+    <!-- Optional: Add elevation shadow -->
+    <padding
+        android:left="4dp"
+        android:top="4dp"
+        android:right="4dp"
+        android:bottom="4dp" />
+</shape>

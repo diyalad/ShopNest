@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Discount"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/discount10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10% or more" />
+
+    <CheckBox
+        android:id="@+id/discount20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20% or more" />
+
+    <CheckBox
+        android:id="@+id/discount50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50% or more" />
+
+    <Button
+        android:id="@+id/applyDiscountFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/filter_button_bg" />
+</LinearLayout>

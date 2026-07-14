@@ -1,0 +1,17 @@
+<!-- res/drawable/filter_button_bg.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#E0E0E0" /> <!-- Color when button is pressed -->
+            <corners android:radius="8dp" /> <!-- Rounded corners -->
+            <stroke android:width="1dp" android:color="#BDBDBD" /> <!-- Border -->
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" /> <!-- Default color -->
+            <corners android:radius="8dp" /> <!-- Rounded corners -->
+            <stroke android:width="1dp" android:color="#BDBDBD" /> <!-- Border -->
+        </shape>
+    </item>
+</selector>

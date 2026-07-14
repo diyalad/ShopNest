@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".profile">
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/bottomNavigation">
+
+        <!-- Back Button and Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/baseline_arrow_back_ios_new_24"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/profilebackbtntitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/edit_profile_title"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Language Selection Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/languageChangeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/change_langaue"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- HorizontalScrollView to allow scrolling for language buttons -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/languageContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingEnd="20dp"> <!-- Add padding to the end for better spacing -->
+
+                    <!-- Language Buttons -->
+                    <Button
+                        android:id="@+id/btnEnglish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selected_button"
+                        android:padding="10dp"
+                        android:text="English"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:onClick="onLanguageButtonClick"
+                        android:layout_marginEnd="8dp"/> <!-- Add margin between buttons -->
+
+                    <Button
+                        android:id="@+id/btnHindi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/unselected_button"
+                        android:padding="10dp"
+                        android:text="हिंदी"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:onClick="onLanguageButtonClick"
+                        android:layout_marginEnd="8dp"/> <!-- Add margin between buttons -->
+
+                    <Button
+                        android:id="@+id/btnTamil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/unselected_button"
+                        android:padding="10dp"
+                        android:text="தமிழ்"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:onClick="onLanguageButtonClick"
+                        android:layout_marginEnd="8dp"/> <!-- Add margin between buttons -->
+
+                    <Button
+                        android:id="@+id/btnTelugu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/unselected_button"
+                        android:padding="10dp"
+                        android:text="తెలుగు"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:onClick="onLanguageButtonClick"
+                        android:layout_marginEnd="8dp"/> <!-- Add margin between buttons -->
+
+                    <Button
+                        android:id="@+id/btnKannada"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/unselected_button"
+                        android:padding="10dp"
+                        android:text="ಕನ್ನಡ"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:onClick="onLanguageButtonClick"
+                        android:layout_marginEnd="8dp"/> <!-- Add margin between buttons -->
+
+                    <Button
+                        android:id="@+id/btnUrdu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/unselected_button"
+                        android:padding="10dp"
+                        android:text="اردو"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:onClick="onLanguageButtonClick"
+                        android:layout_marginEnd="8dp"/> <!-- Add margin between buttons -->
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+
+        <!-- Account Settings Section -->
+        <TextView
+            android:id="@+id/accountSettingsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/account_settings"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:paddingTop="10dp"
+            android:paddingLeft="16dp"
+            android:paddingBottom="5dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@android:color/white"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Save Address -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_fmd_good_24" />
+
+                    <TextView
+                        android:id="@+id/saveAddressTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/save_address"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:layout_marginStart="12dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0" />
+
+                <!--                &lt;!&ndash; Edit Profile &ndash;&gt;-->
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:gravity="center_vertical"-->
+                <!--                    android:orientation="horizontal"-->
+                <!--                    android:padding="8dp">-->
+
+                <!--                    <ImageView-->
+                <!--                        android:layout_width="24dp"-->
+                <!--                        android:layout_height="24dp"-->
+                <!--                        android:src="@drawable/baseline_person_24" />-->
+
+                <!--                    <TextView-->
+                <!--                        android:id="@+id/editProfileTV"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginStart="12dp"-->
+                <!--                        android:text="@string/edit_profile"-->
+                <!--                        android:textColor="#000000"-->
+                <!--                        android:textSize="14sp" />-->
+                <!--                </LinearLayout>-->
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- My Activity Section -->
+        <TextView
+            android:id="@+id/myActivityTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:text="@string/my_activity_title"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:paddingLeft="16dp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@android:color/white"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Reviews -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_grade_24" />
+
+                    <TextView
+                        android:id="@+id/reviewTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reviews"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:layout_marginStart="12dp" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Log Out Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/Logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/logout"
+            android:textSize="20dp"
+            android:backgroundTint="@color/deep_blue"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp">
+        </com.google.android.material.button.MaterialButton>
+    </LinearLayout>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/bottom_nav_bg"
+        app:itemIconSize="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="8.5dp"
+        android:elevation="2dp"
+        app:itemIconTint="@drawable/item_select_nav"
+        app:labelVisibilityMode="unlabeled"
+        android:backgroundTint="@color/deep_blue"
+        app:menu="@menu/bottom_menu" />
+</RelativeLayout>

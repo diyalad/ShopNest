@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp"
+            android:gravity="center_vertical"
+            android:elevation="2dp">
+
+            <!-- Back Button -->
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/baseline_arrow_back_ios_new_24"
+                android:contentDescription="Back"
+                android:padding="8dp" />
+
+            <!-- Title: Select Address -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Address"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginStart="12dp"/>
+        </LinearLayout>
+
+        <!-- Add New Address Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            card_view:cardCornerRadius="8dp"
+            card_view:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Add New Address Button -->
+                <TextView
+                    android:id="@+id/addNewAddressButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/transparent"
+                    android:drawableStart="@drawable/baseline_add_24"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:text="Add a new address"
+                    android:textColor="@color/deep_blue"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:background="?attr/selectableItemBackground"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Address List with Edit Button -->
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Address List -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/address_background"
+                android:padding="16dp">
+
+                <!-- RadioGroup with Edit Buttons -->
+                <RadioGroup
+                    android:id="@+id/addressRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!-- RadioButtons will be added dynamically -->
+                </RadioGroup>
+            </LinearLayout>
+        </FrameLayout>
+        <!-- Deliver Here Button -->
+        <Button
+            android:id="@+id/deliverHereButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DELIVER HERE"
+            android:backgroundTint="@color/deep_blue"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+    </LinearLayout>
+</ScrollView>

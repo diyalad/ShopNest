@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp"
+            android:gravity="center_vertical">
+
+            <!-- Back Button -->
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/baseline_arrow_back_ios_new_24"
+                android:contentDescription="Back"
+                android:padding="8dp" />
+
+            <!-- Title: Add Delivery Address -->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add delivery address"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginStart="12dp"/>
+        </LinearLayout>
+
+        <!-- Progress Indicator -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingBottom="16dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:background="@drawable/circle_background"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:padding="8dp"/>
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="2dp"
+                android:background="@color/gray_light"
+                android:layout_marginHorizontal="8dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:background="@drawable/circle_background_gray"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:padding="8dp"/>
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="2dp"
+                android:background="@color/gray_light"
+                android:layout_marginHorizontal="8dp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:background="@drawable/circle_background_gray"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <!-- Full Name Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fullNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full Name (Required) *"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Phone Number Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phoneNumberEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone number (Required) *"
+                android:inputType="phone"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Container for Alternate Phone Numbers -->
+        <LinearLayout
+            android:id="@+id/alternatePhoneContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+        </LinearLayout>
+
+        <!-- Add Alternate Phone Number -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/addAlternatePhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ Add Alternate Phone Number"
+            android:textSize="16sp"
+            android:textColor="@color/deep_blue"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Pincode Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pincodeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pincode (Required) *"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- State Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/stateEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="State (Required) *"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Use My Location -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/useMyLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use my location"
+            android:textSize="16sp"
+            android:textColor="@color/deep_blue"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- City Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cityEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="City (Required) *"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- House No., Building Name Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/houseNoEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="House No., Building Name (Required) *"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Road Name, Area, Colony Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/roadNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Road name, Area, Colony (Required) *"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Type of Address -->
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type of address"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/homeRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="16sp"
+                android:layout_marginEnd="16dp"/>
+
+            <RadioButton
+                android:id="@+id/workRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Work"
+                android:textSize="16sp"/>
+        </RadioGroup>
+
+        <!-- Save Address Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveAddressButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Address"
+            android:backgroundTint="@color/deep_blue"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</ScrollView>
